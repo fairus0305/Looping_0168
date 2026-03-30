@@ -1,25 +1,44 @@
-//LOGIKA OR
 #include <iostream>
+#include <ctime>
 using namespace std;
 
 int main()
 {
-    float nilB, nilM, rerata;
-    string status;
+    int x;
+    // Perulangan dengan FOR
+    // mencetak tulisan sebanyak 5 kali
+    cout << "PERULANGAN FOR" << endl;
+    for (int i = 0; i <= 4; i++){
+        cout << "Teknologi Informasi UMY" << endl;
+    }
+    cout << endl;
 
-    cout << "Masukkan nilai Matematika = ";
-    cin >> nilM;
+    // untuk mendapatkan urutan angka acak yg berbeda
+    srand(time(0));
 
-    cout << "Masukkan nilai Bahasa Inggris = ";
-    cin >> nilB;
+    // Perulangan dengan WHILE
+    cout << "PERULANGAN WHILE" << endl;
+    x = 1 + rand() % 10;
 
-    rerata = (nilB + nilM) / 2;
+    while (x <= 5)
+    {
+        cout << "Bilangan acak = " << x << endl;
+        x = rand() % 10;
+    }
 
-    if ((rerata >= 60) || (nilM >= 70))
-        status = "Lulus";
-    else
-        status = "Tidak lulus";
+    cout << "Bilangan acak while yang terakhir = " << x << endl;
+    cout << endl;
 
-    cout << "Status kelulusan = " << status
-         << " ,dengan nilai rata-rata = " << rerata << endl;
+    // Perulangan dengan DO...WHILE
+    cout << "PERULANGAN DO...WHILE" << endl;
+    x = 1 + rand() % 10;
+
+    do
+    {
+        cout << "Bilangan acak = " << x << endl;
+        x = rand() % 10;
+    } while (x <= 5);
+
+    cout << "Bilangan acak do-while yang terakhir = " << x << endl;
+    cout << endl;
 }
